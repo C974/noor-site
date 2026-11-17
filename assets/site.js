@@ -14,6 +14,9 @@
       });
       return best;
     };
+    var ctl = d.querySelector('.strip-ctl');
+    var fit = function () { if (ctl) ctl.hidden = strip.scrollWidth <= strip.clientWidth + 2; };
+    fit(); addEventListener('resize', fit);
     [].forEach.call(d.querySelectorAll('.strip-ctl .cbtn'), function (btn) {
       btn.addEventListener('click', function () {
         var i = Math.max(0, Math.min(slides.length - 1, current() + Number(btn.dataset.dir)));
