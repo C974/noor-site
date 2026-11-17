@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://c974.github.io/noor-site/sitemap.xml
